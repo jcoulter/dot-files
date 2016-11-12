@@ -24,6 +24,8 @@ function unproxy {
 
 alias ls='ls -a'
 
+alias dot="cd ~/dot-files"
+
 alias mos="cd c:/dev/Mosaic"
 alias gloss="cd c:/dev/GlossAdjustment"
 alias hosts="vi c:/Windows/System32/drivers/etc/hosts"

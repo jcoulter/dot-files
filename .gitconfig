@@ -9,9 +9,6 @@
 	unstage = reset HEAD --
 	dc = diff --cached
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
-[user]
-	email = jxc400@sherwin.com
-	name = Jacob Coulter
 [push]
 	default = upstream
 [core]
@@ -29,7 +26,3 @@
 	keepbackups = false
 	prompt = false
 	trustexitcode = false
-[diff]
-	guitool = kdiff3
-[difftool "kdiff3"]
-	path = C:/Program Files/KDiff3/kdiff3.exe

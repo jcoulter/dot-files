@@ -1,2 +1,2 @@
-cp .gitconfig ~/.gitconfig
-cp .bashrc ~/bashrc
+cp .gitconfig ../.gitconfig
+cp .bashrc ../.bashrc

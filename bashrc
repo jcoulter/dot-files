@@ -10,7 +10,7 @@ function proxy {
   export HTTP_PROXY=http://proxy.proxysherwin.com:80;
   export HTTPS_PROXY=http://proxy.proxysherwin.com:80;
   export FTP_PROXY=http://proxy.proxysherwin.com:80;
-  export no_proxy="localhost;*sherwin.com"
+  export no_proxy="localhost;github.sherwin.com;*sherwin.com;*.local;localhost;169.254/16;*.sherwin.com;*.gmscolor.com;10.37.129.*;local.mosaic.sherwin.com"
 }
 
 function unproxy {
@@ -28,6 +28,7 @@ alias dot="cd ~/dot-files"
 
 alias mos="cd c:/dev/Mosaic"
 alias gloss="cd c:/dev/GlossAdjustment"
+alias apps="cd c:/dev/Mosaic-AppServices"
 alias hosts="vi c:/Windows/System32/drivers/etc/hosts"
 
 alias bashrc="vi ~/dot-files/bashrc"

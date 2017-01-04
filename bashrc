@@ -10,7 +10,7 @@ function proxy {
   export HTTP_PROXY=http://proxy.proxysherwin.com:80;
   export HTTPS_PROXY=http://proxy.proxysherwin.com:80;
   export FTP_PROXY=http://proxy.proxysherwin.com:80;
-  export no_proxy="localhost;*sherwin.com"
+  export no_proxy="localhost;*sherwin.com;local.mosaic.sherwin.com"
 }
 
 function unproxy {
@@ -22,7 +22,7 @@ function unproxy {
   unset no_proxy;
 }
 
-alias ls='ls -a'
+alias ls='ls -aG'
 
 alias dot="cd ~/dot-files"
 
@@ -59,12 +59,12 @@ alias fgrep='fgrep --color=auto'
 alias globurl='noglob urlglobber '
 alias grep='grep  --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 alias history='fc -l 1'
-alias l='ls -lah'
-alias la='ls -lAh'
-alias ll='ls -lh'
-alias ls='ls -a --color'
-alias lsa='ls -lah'
-alias lsd="ls -l | grep ^d"
+alias l='ls -Glah'
+alias la='ls -GlAh'
+alias ll='ls -Glh'
+alias ls='ls -Gac'
+alias lsa='ls -Glah'
+alias lsd="ls -Gl | grep ^d"
 alias md='mkdir -p'
 alias open=cygstart
 alias pbcopy='cat >/dev/clipboard'

@@ -34,6 +34,8 @@ alias hosts="vi c:/Windows/System32/drivers/etc/hosts"
 alias bashrc="vi ~/dot-files/bashrc"
 alias tools="cd c:/tools"
 
+alias tmux="tmux -2"
+
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'

@@ -22,10 +22,9 @@ function unproxy {
   unset no_proxy;
 }
 
-alias ls='ls -aG'
-
 alias dot="cd ~/dot-files"
 
+alias iggy="cd ~/iggy"
 alias mos="cd c:/dev/Mosaic"
 alias gloss="cd c:/dev/GlossAdjustment"
 alias apps="cd c:/dev/Mosaic-AppServices"
@@ -76,9 +75,9 @@ alias please=sudo
 alias po=popd
 alias pu=pushd
 alias rd=rmdir
-alias run-help=man
 alias vi=vim
 alias wget='wget --user-agent="$USER_AGENT"'
-alias which-command=whence
 
-source ~/dot-files/my_prompt.sh
+# rem source ~/dot-files/my_prompt.sh
+
+source ~/dot-files/git-completion.sh

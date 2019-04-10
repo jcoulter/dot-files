@@ -7,7 +7,7 @@ alias dot="cd ~/dot-files"
 
 alias hosts="vi c:/Windows/System32/drivers/etc/hosts"
 
-alias bashrc="vi ~/dot-files/bashrc"
+alias zshrc="vi ~/dot-files/zshrc"
 alias tools="cd c:/tools"
 
 alias tmux="tmux -2"
@@ -54,17 +54,6 @@ alias pu=pushd
 alias rd=rmdir
 alias vi=vim
 alias wget='wget --user-agent="$USER_AGENT"'
-alias which-command=whence
-alias learn='cd ~/learningcurve'
-alias koans='cd ~/learningcurve/koans'
-alias rachel='cd ~/../Rachel'
-alias nathan='cd ~/../Nathan'
-alias maria='cd ~/../Maria'
-alias work='cd e:/work'
-alias trader='cd e:work/trader'
-
-
-export JAVA_HOME='/c/Program Files/Android/Android Studio/jre'
 
 # rem source ~/dot-files/my_prompt.sh
 

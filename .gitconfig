@@ -18,7 +18,7 @@
 [color]
 	ui = true
 [credential]
-		helper = wincred
+	helper = wincred
 [merge]
 	tool = vimdiff
 [mergetool]

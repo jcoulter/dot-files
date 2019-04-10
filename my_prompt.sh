@@ -6,9 +6,6 @@ else
 fi
 
 POSIX_PATH=`pwd`
-WIN_PATH=`cygpath -w $POSIX_PATH`
-
-
 
 PS1='\[\033]0;${PWD//[^[:ascii:]]/?}\007\]' # set window title
 PS1="$PS1"'\n'                 # new line

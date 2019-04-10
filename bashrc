@@ -77,5 +77,15 @@ alias run-help=man
 alias vi=vim
 alias wget='wget --user-agent="$USER_AGENT"'
 alias which-command=whence
+alias learn='cd ~/learningcurve'
+alias koans='cd ~/learningcurve/koans'
+alias rachel='cd ~/../Rachel'
+alias nathan='cd ~/../Nathan'
+alias maria='cd ~/../Maria'
+alias work='cd e:/work'
+alias trader='cd e:work/trader'
+
+
+export JAVA_HOME='/c/Program Files/Android/Android Studio/jre'
 
 source ~/dot-files/my_prompt.sh

@@ -62,6 +62,7 @@ alias nathan='cd ~/../Nathan'
 alias maria='cd ~/../Maria'
 alias work='cd e:/work'
 alias trader='cd e:work/trader'
+alias tt='./gradlew :CoinbasePro:clean :CoinbasePro:test :tv:clean :tv:test'
 
 
 export JAVA_HOME='/c/Program Files/Android/Android Studio/jre'

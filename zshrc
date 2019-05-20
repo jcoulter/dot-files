@@ -6,6 +6,8 @@ function cdl {
 alias dot="cd ~/dot-files"
 
 alias hosts="vi c:/Windows/System32/drivers/etc/hosts"
+ 
+fpath=(/usr/local/share/zsh-completions $fpath)
 
 alias zshrc="vi ~/dot-files/zshrc"
 alias tools="cd c:/tools"
@@ -57,4 +59,3 @@ alias wget='wget --user-agent="$USER_AGENT"'
 
 # rem source ~/dot-files/my_prompt.sh
 
-source ~/dot-files/git-completion.sh

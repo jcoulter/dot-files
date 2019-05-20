@@ -26,3 +26,5 @@
 	keepbackups = false
 	prompt = false
 	trustexitcode = false
+[pager]
+        branch = false

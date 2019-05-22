@@ -59,3 +59,8 @@ alias wget='wget --user-agent="$USER_AGENT"'
 
 # rem source ~/dot-files/my_prompt.sh
 
+# I like gallois refined and wezm mortalscumbag
+ZSH_THEME="gallois"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

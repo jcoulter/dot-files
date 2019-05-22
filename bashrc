@@ -70,3 +70,6 @@ export JAVA_HOME='/c/Program Files/Android/Android Studio/jre'
 # rem source ~/dot-files/my_prompt.sh
 
 source ~/dot-files/git-completion.sh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

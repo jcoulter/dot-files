@@ -51,3 +51,5 @@ alias wget='wget --user-agent="$USER_AGENT"'
 alias which-command=whence
 
 alias dot="cd ~/dot-files"
+
+export EDITOR='vim'

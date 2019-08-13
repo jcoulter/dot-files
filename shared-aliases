@@ -52,4 +52,6 @@ alias which-command=whence
 
 alias dot="cd ~/dot-files"
 
+alias rc="rails console"
+
 export EDITOR='vim'

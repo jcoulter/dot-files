@@ -1,0 +1,6 @@
+#!/bin/sh
+date=`date +"%Y%m%d_%H%M%N"`
+filename="$HOME/pg_dumps/partner_engine_${date}.bak"
+pg_dump partner_engine_development -Z9 -Fc > $filename
+
+exit 0

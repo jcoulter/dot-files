@@ -52,6 +52,10 @@ alias which-command=whence
 
 alias dot="cd ~/dot-files"
 
-alias rc="rails console"
+alias rails="bin/rails"
+alias rake="bin/rails"
+alias rc="bin/rails console"
+alias taskgrep="bin/rake --tasks | grep"
+
 
 export EDITOR='vim'

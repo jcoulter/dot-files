@@ -141,7 +141,7 @@ set shell=/bin/bash
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'myusuf3/numbers.vim'
+" Plug 'myusuf3/numbers.vim'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
   Plug 'junegunn/fzf', { 'do': './install --bin' }

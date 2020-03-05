@@ -4,12 +4,14 @@ alias bp='pen'
 alias ce='cd ~/boldpenguin/carrier-engine'
 alias re='cd ~/boldpenguin/rules-engine'
 alias pe='cd ~/boldpenguin/partner-engine'
+alias pqi='cd ~/boldpenguin/pqi'
 alias auth='cd ~/boldpenguin/authenticator'
 alias ete='cd ~/boldpenguin/bp-end-to-end'
+alias interview='cd ~/boldpenguin/interview'
+alias eit='cd ~/boldpenguin/emperor-integration-test'
+alias flushred='redis-cli flushall'
+alias add_ev='rake evanston:nuke && rake patches:20200210081848_add_evanston'
 
-alias rails='bin/rails'
-alias rake='bin/rake'
-alias serve='bin/rails s'
 
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"

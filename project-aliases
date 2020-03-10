@@ -10,6 +10,7 @@ alias ete='cd ~/boldpenguin/bp-end-to-end'
 alias interview='cd ~/boldpenguin/interview'
 alias eit='cd ~/boldpenguin/emperor-integration-test'
 alias flushred='redis-cli flushall'
+alias redflush='redis-cli flushall'
 alias add_ev='rake evanston:nuke && rake patches:20200210081848_add_evanston'
 
 

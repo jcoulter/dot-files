@@ -4,6 +4,8 @@ alias bp='pen'
 alias ce='cd ~/boldpenguin/carrier-engine'
 alias re='cd ~/boldpenguin/rules-engine'
 alias pe='cd ~/boldpenguin/partner-engine'
+alias pport='cd ~/boldpenguin/progressive-portal'
+alias pgate='cd ~/boldpenguin/progressive-gateway'
 alias pqi='cd ~/boldpenguin/pqi'
 alias auth='cd ~/boldpenguin/authenticator'
 alias ete='cd ~/boldpenguin/bp-end-to-end'
@@ -11,7 +13,7 @@ alias interview='cd ~/boldpenguin/interview'
 alias eit='cd ~/boldpenguin/emperor-integration-test'
 alias flushred='redis-cli flushall'
 alias redflush='redis-cli flushall'
-alias add_ev='rake evanston:nuke && rake patches:20200210081848_add_evanston'
+alias mid_reset='rails midvale:nuke && rails midvale:build_all && rails patches:20200515135342_setup_midvale_for_test'
 
 
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"

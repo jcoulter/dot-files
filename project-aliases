@@ -11,10 +11,15 @@ alias auth='cd ~/boldpenguin/authenticator'
 alias ete='cd ~/boldpenguin/bp-end-to-end'
 alias interview='cd ~/boldpenguin/interview'
 alias eit='cd ~/boldpenguin/emperor-integration-test'
-alias flushred='redis-cli flushall'
-alias redflush='redis-cli flushall'
+#alias flushred='redis-cli flushall'
+#alias redflush='redis-cli flushall'
 alias mid_reset='rails midvale:nuke && rails midvale:build_all && rails patches:20200515135342_setup_midvale_for_test'
-
+alias ru='cd ~/boldpenguin/pengie-raft && BP_ELASTICSEARCH_PORT=9200 BP_REDIS_PORT=6379 docker-compose up -d elasticsearch redis && cd -'
+alias flushredis='docker exec -it raft_redis redis-cli FLUSHALL'
+alias flushred='flushredis'
+alias redflush='flushredis'
+alias pryable='bundle exec puma -w 1 -p 8080'
+alias pgup='rails db:drop && rails db:create && psql partner_engine_development < '
 
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"

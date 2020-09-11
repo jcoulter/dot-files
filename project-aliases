@@ -8,6 +8,7 @@ alias pport='cd ~/boldpenguin/progressive-portal'
 alias pgate='cd ~/boldpenguin/progressive-gateway'
 alias pqi='cd ~/boldpenguin/pqi'
 alias auth='cd ~/boldpenguin/authenticator'
+alias pool='cd ~/boldpenguin/carpool'
 alias ete='cd ~/boldpenguin/bp-end-to-end'
 alias interview='cd ~/boldpenguin/interview'
 alias eit='cd ~/boldpenguin/emperor-integration-test'
@@ -19,7 +20,8 @@ alias flushredis='docker exec -it raft_redis redis-cli FLUSHALL'
 alias flushred='flushredis'
 alias redflush='flushredis'
 alias pryable='bundle exec puma -w 1 -p 8080'
-alias pgup='rails db:drop && rails db:create && psql partner_engine_development < '
+alias pgup='rails db:drop && rails db:create && psql partner_engine_development '
+alias amfamseed='bin/rails amfam_dev:seed'
 
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"

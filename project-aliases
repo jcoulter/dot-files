@@ -1,6 +1,6 @@
 alias pen='cd ~/boldpenguin'
 alias bold='pen'
-alias bp='pen'
+alias cdbp='pen'
 alias ce='cd ~/boldpenguin/carrier-engine'
 alias re='cd ~/boldpenguin/rules-engine'
 alias pe='cd ~/boldpenguin/partner-engine'

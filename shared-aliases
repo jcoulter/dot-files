@@ -30,7 +30,7 @@ alias egrep='egrep --color=auto'
 alias emacs=emacs-nox
 alias erb=erb.bat
 alias fgrep='fgrep --color=auto'
-alias globurl='noglob urlglobber '
+# alias globurl='noglob urlglobber '
 alias grep='grep  --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 alias history='fc -l 1'
 alias l='ls -Glah'
@@ -46,13 +46,16 @@ alias please=sudo
 alias po=popd
 alias pu=pushd
 alias rd=rmdir
-alias vi=vim
+alias vi=nvim
 alias wget='wget --user-agent="$USER_AGENT"'
 alias which-command=whence
+alias pritunl=pritunl-client-electron
+alias pycharm=/opt/pycharm-community-2021.2.2/bin/pycharm.sh
+alias pi-tub='cd ~/pi-tub'
 
 alias dot="cd ~/dot-files"
 
-alias rails="noglob bin/rails"
+alias rails="./bin/rails"
 alias rake="rails"
 alias serve="bin/server"
 alias s="serve"

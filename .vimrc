@@ -18,6 +18,9 @@ set shell=/bin/bash
   set spell                   " Spell checking on
   set hidden                  " Allow buffer switching without saving
   set lazyredraw              " Buffer the screen updates
+  " set regexpengine=1          " Performance gain using old regular expression engine
+  set cmdheight=2             " Better display for messages
+  set signcolumn=yes          " Always show signcolumns
 
   " Instead of reverting the cursor to the last position in the buffer, we set
   " it to the first line when editing a git commit message
@@ -73,6 +76,7 @@ set shell=/bin/bash
   set listchars=tab:›\ ,trail:•,extends:#,nbsp:. " Highlight problematic whitespace
   set colorcolumn=80              " Set column where formatting breaks lines
   set noshowmode                  " Remove default mode indicator (use airline)
+  highlight link yardGenericTag rubyKeyword " better highlight yardoc keywords
 
   if has('cmdline_info')
     set ruler                   " Show the ruler
@@ -131,19 +135,25 @@ set shell=/bin/bash
   noremap k gk
 " }
 
+" Download vim-plug if missing
+if empty(glob("~/.vim/autoload/plug.vim"))
+  silent! execute '!curl --create-dirs -fsSLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * silent! PlugInstall
+endif
+
 " Plugins {
   call plug#begin('~/.vim/plugged')  " specify dir for plugins
   Plug 'morhetz/gruvbox'
-  Plug 'airblade/vim-gitgutter'
   Plug 'vim-airline/vim-airline'
   Plug 'w0rp/ale'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-repeat'
   Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-rails'
+  Plug 'tpope/vim-bundler'
+  Plug 'ruanyl/vim-gh-line'
   Plug 'nathanaelkane/vim-indent-guides'
-" Plug 'myusuf3/numbers.vim'
   Plug 'scrooloose/nerdcommenter'
-  Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
   Plug 'junegunn/fzf', { 'do': './install --bin' }
   Plug 'junegunn/fzf.vim'
   Plug 'godlygeek/tabular', { 'on': 'Tabularize' }
@@ -151,19 +161,18 @@ set shell=/bin/bash
   Plug 'pacha/vem-tabline'
   Plug 'sheerun/vim-polyglot'
   if has('nvim')
-    Plug 'neoclide/coc.nvim', { 'tag': '*', 'do': { -> coc#util#install() } }
+    Plug 'neoclide/coc.nvim', { 'do': 'yarn install --frozen-lockfile' }
     Plug 'honza/vim-snippets'
   endif
   call plug#end()
 
+  " rust.vim {
+    let g:rust_recommended_style = 0
+  " }
+
   " Gruvbox {
     let g:gruvbox_contrast_dark = 'medium'
     colorscheme gruvbox
-  " }
-
-  " GitGutter {
-    let g:gitgutter_realtime = 0
-    let g:gitgutter_eager = 0
   " }
 
   " Airline {
@@ -172,6 +181,8 @@ set shell=/bin/bash
   " Ale {
     let g:ale_sign_error = '✘'
     let g:ale_sign_warning = '⚠'
+    let g:ale_ruby_rubocop_executable = 'bundle'
+    let g:ale_ruby_reek_executable = 'bundle'
 
     " Map movement through errors with wrapping
     nmap <silent> <C-k> <Plug>(ale_previous_wrap)
@@ -185,22 +196,9 @@ set shell=/bin/bash
     let g:indent_guides_enable_on_vim_startup = 1
   " }
 
-  " numbers.vim {
-    nnoremap <F3> :NumbersToggle<CR>
-  " }
-
   " NERDCommenter {
     let g:NERDSpaceDelims = 1
     let g:NERDDefaultAlign = 'left'
-  " }
-
-  " NERDTree {
-    nmap <C-e>      :NERDTreeToggle<CR>
-    nmap <leader>e  :NERDTreeFind<CR>
-
-    let NERDTreeQuitOnOpen = 1
-    let NERDTreeMouseMode = 2
-    let NERDTreeShowHidden = 1
   " }
 
   " FZF {
@@ -234,6 +232,54 @@ set shell=/bin/bash
     " Label mode
     let g:sneak#label = 1
   " }
+
+  if has('nvim')
+    " Use tab for trigger completion with characters ahead and navigate.
+    " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
+    inoremap <silent><expr> <TAB>
+          \ pumvisible() ? "\<C-n>" :
+          \ <SID>check_back_space() ? "\<TAB>" :
+          \ coc#refresh()
+    inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+    function! s:check_back_space() abort
+      let col = col('.') - 1
+      return !col || getline('.')[col - 1]  =~# '\s'
+    endfunction
+
+    " Use <c-space> to trigger completion.
+    inoremap <silent><expr> <c-space> coc#refresh()
+
+    " Remap keys for gotos
+    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gy <Plug>(coc-type-definition)
+    nmap <silent> gi <Plug>(coc-implementation)
+    nmap <silent> gr <Plug>(coc-references)
+
+    " Use K to show documentation in preview window
+    nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+    function! s:show_documentation()
+      if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+      else
+        call CocAction('doHover')
+      endif
+    endfunction
+
+    " Remap for rename current word
+    nmap <leader>rn <Plug>(coc-rename)
+
+    " Create mappings for function text object, requires document symbols feature of languageserver.
+    xmap if <Plug>(coc-funcobj-i)
+    xmap af <Plug>(coc-funcobj-a)
+    omap if <Plug>(coc-funcobj-i)
+    omap af <Plug>(coc-funcobj-a)
+
+    " Toggle coc-explorer
+    nmap <leader>e :CocCommand explorer<CR>
+  " }
+  endif
 " }
 
 " Functions {

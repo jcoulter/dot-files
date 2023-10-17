@@ -1,9 +1,9 @@
 alias aliases="vi ~/dot-files/shared-aliases"
 
-function cdl {
-  cd $1;
-  ls;
-}
+#function cdl {
+#  cd $1;
+#  ls;
+#}
 
 alias tmux="tmux -2"
 
@@ -34,11 +34,9 @@ alias fgrep='fgrep --color=auto'
 alias grep='grep  --color=auto --exclude-dir={.bzr,.cvs,.git,.hg,.svn}'
 alias history='fc -l 1'
 alias l='ls -Glah'
-alias la='ls -GlAh'
+alias la='l'
 alias ll='ls -Glh'
 alias ls='ls -Gac'
-alias lsa='ls -Glah'
-alias lsd="ls -Gl | grep ^d"
 alias md='mkdir -p'
 alias pbcopy='cat >/dev/clipboard'
 alias pbpaste='cat /dev/clipboard'
@@ -49,13 +47,11 @@ alias rd=rmdir
 alias vi=nvim
 alias wget='wget --user-agent="$USER_AGENT"'
 alias which-command=whence
-alias pritunl=pritunl-client-electron
-alias pycharm=/opt/pycharm-community-2021.2.2/bin/pycharm.sh
-alias pi-tub='cd ~/pi-tub'
 
 alias dot="cd ~/dot-files"
 
-alias rails="./bin/rails"
+alias cat='bat'
+alias rails="noglob ./bin/rails"
 alias rake="rails"
 alias serve="bin/server"
 alias s="serve"
@@ -65,5 +61,5 @@ alias be="bundle exec"
 alias rspec="time be rspec"
 alias weather="curl -4 http://wttr.in/44321"
 
-
-export EDITOR='vim'
+alias dud='du -d 1 -h'
+alias h='history'

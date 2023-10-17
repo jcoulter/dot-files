@@ -32,6 +32,9 @@ alias apryable='bundle exec puma -w 1 -p 3000'
 alias pgup='rails db:drop && rails db:create && psql partner_engine_development '
 alias amfamseed='bin/rails amfam_dev:seed'
 alias pehelp='more ~/.pryrc'
+alias tmbr='time ./bin/reset'
+alias tbr='tmbr'
+alias br='tmbr'
 
 alias pg_start="launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"
 alias pg_stop="launchctl unload ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist"

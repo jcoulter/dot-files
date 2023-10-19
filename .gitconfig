@@ -28,3 +28,24 @@
 	trustexitcode = false
 [pager]
         branch = false
+[user]
+	name = Jacob Coulter
+	email = jacob.coulter@gmail.com
+[pull]
+	rebase = false
+[core]
+    pager = delta -s
+
+[interactive]
+    diffFilter = delta -s
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+

@@ -22,7 +22,6 @@ alias 8='cd -8'
 alias 9='cd -9'
 alias _=sudo
 alias afind='ack-grep -il'
-alias curl='curl -A "$USER_AGENT"'
 
 #THIS ALLOWS VIEWING PREVIOUS DIRS#
 alias d='dirs -v | head -10'
@@ -50,7 +49,6 @@ alias which-command=whence
 
 alias dot="cd ~/dot-files"
 
-alias cat='bat'
 alias rails="noglob ./bin/rails"
 alias rake="rails"
 alias serve="bin/server"
@@ -59,7 +57,7 @@ alias rc="bin/rails console"
 alias taskgrep="bin/rake --tasks | grep"
 alias be="bundle exec"
 alias rspec="time be rspec"
-alias weather="curl -4 http://wttr.in/44321"
+alias weather="curl -4 http://wttr.in/44321\?u"
 
 alias dud='du -d 1 -h'
 alias h='history'

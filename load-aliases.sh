@@ -5,6 +5,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
            echo 'LINUX!!!'
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         echo 'MAC!!!'
+	source ~/dot-files/override-aliases.zsh
 # elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
 # elif [[ "$OSTYPE" == "msys" ]]; then

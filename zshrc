@@ -20,4 +20,11 @@ source ~/dot-files/load-aliases.sh
 source /usr/local/opt/asdf/libexec/asdf.sh
 export PATH="$PATH:$HOME/dot-files/bin"
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--extended"
+if (( $+commands[fd] ))
+then
+  export FZF_DEFAULT_COMMAND="fd --type f"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+fi
 

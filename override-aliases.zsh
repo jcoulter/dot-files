@@ -23,5 +23,5 @@ fi
 
 if (( $+commands[bat] ))
 then
-  alias cat='bat'
+  alias cat='bat -p'
 fi

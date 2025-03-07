@@ -50,7 +50,6 @@ alias which-command=whence
 alias dot="cd ~/dot-files"
 
 alias rails="noglob ./bin/rails"
-alias rake="rails"
 alias serve="bin/server"
 alias s="serve"
 alias rc="bin/rails console"

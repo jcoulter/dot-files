@@ -24,4 +24,3 @@ export PATH="$PATH:$HOME/dot-files/bin"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--extended"
 #export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-eval "$(mise activate zsh)"

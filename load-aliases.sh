@@ -5,13 +5,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
         echo 'LINUX!!!'
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source ~/dot-files/override-aliases.zsh
-        eval "$(starship init bash)"
+        eval "$(starship init zsh)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         echo 'MAC!!!'
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source ~/dot-files/override-aliases.zsh
 	eval "$(mise activate zsh)"
-        eval "$(starship init bash)"
+        eval "$(starship init zsh)"
 # elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
 # elif [[ "$OSTYPE" == "msys" ]]; then

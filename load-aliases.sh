@@ -2,10 +2,15 @@
 source ~/dot-files/shared-aliases
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-           echo 'LINUX!!!'
+        echo 'LINUX!!!'
+	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+	source ~/dot-files/override-aliases.zsh
+        eval "$(starship init bash)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         echo 'MAC!!!'
+	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source ~/dot-files/override-aliases.zsh
+	eval "$(mise activate zsh)"
 # elif [[ "$OSTYPE" == "cygwin" ]]; then
         # POSIX compatibility layer and Linux environment emulation for Windows
 # elif [[ "$OSTYPE" == "msys" ]]; then

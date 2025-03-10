@@ -46,6 +46,9 @@ alias rd=rmdir
 alias vi=nvim
 alias wget='wget --user-agent="$USER_AGENT"'
 alias which-command=whence
+alias work='cd ~/work/'
+alias ans='cd ~/work/ansible_playbooks'
+alias health='cd ~/work/health'
 
 alias dot="cd ~/dot-files"
 

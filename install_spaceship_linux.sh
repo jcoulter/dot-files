@@ -13,5 +13,5 @@ rm Noto.zip
 # Update font cache
 fc-cache -fv
 
-ln -s ~/dot-files/config ~/.config
+ln -s ~/dot-files/config/fontconfig ~/.config/fontconfig
 

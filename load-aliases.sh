@@ -5,6 +5,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
         echo 'LINUX!!!'
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source ~/dot-files/override-aliases.zsh
+        eval "$(starship init bash)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
         echo 'MAC!!!'
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh

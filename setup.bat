@@ -7,7 +7,6 @@ cp .bashrc ../.bashrc
 cp .zshrc ../.zshrc
 ln -s ~/dot-files/default-npm-packages ~/.default-npm-packages
 ln -s ~/dot-files/default-gems ~/.default-gems
-ln -s ~/dot-files/.asdfrc ~/.asdfrc
 ln -s ~/dot-files/.vimrc ~/.vimrc
 ln -s ~/dot-files/.bundle ~/.bundle
 

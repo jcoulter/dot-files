@@ -17,8 +17,6 @@ ZSH_THEME="gallois"
 # ZSH_THEME="random"
 source ~/dot-files/load-aliases.sh
 
-#source /usr/local/opt/asdf/libexec/asdf.sh
-export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"
 export PATH="$PATH:$HOME/dot-files/bin"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

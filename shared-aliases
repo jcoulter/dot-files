@@ -1,4 +1,5 @@
 alias aliases="vi ~/dot-files/shared-aliases"
+alias q="arch -arm64 /Users/jacob.coulter/.local/bin/q"
 
 #function cdl {
 #  cd $1;

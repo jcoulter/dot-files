@@ -7,7 +7,16 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 	source ~/dot-files/override-aliases.zsh
         eval "$(starship init zsh)"
 elif [[ "$OSTYPE" == "darwin"* ]]; then
-        echo 'MAC!!!'
+        # echo 'MAC!!!'
+	export ARCHPREFERENCE="arm64"
+	
+	# Set up Homebrew paths
+	if [[ -x "/opt/homebrew/bin/brew" ]]; then
+		eval "$(/opt/homebrew/bin/brew shellenv)"
+	elif [[ -x "/usr/local/bin/brew" ]]; then
+		eval "$(/usr/local/bin/brew shellenv)"
+	fi
+	
 	source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source ~/dot-files/override-aliases.zsh
 	if (( $+commands[mise] ))

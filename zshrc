@@ -1,8 +1,6 @@
-fpath=(/usr/local/share/zsh-completions $fpath)
-
 # consider scripting this so it doesn't depend on OMZ:
 # https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
-echo 'zhrc'
+# echo 'zhrc'
 alias zshrc="vi ~/dot-files/zshrc"
 alias reload='source ~/.zshrc'
 
@@ -16,8 +14,14 @@ ZSH_THEME="gallois"
 # ZSH_THEME="xiong-chiamiov-plus"
 # ZSH_THEME="random"
 source ~/dot-files/load-aliases.sh
-echo 'aliases loaded'
+# echo 'aliases loaded'
 export PATH="$PATH:$HOME/dot-files/bin"
+
+# Load shared environment variables (committed to git)
+[ -f ~/dot-files/env.shared ] && source ~/dot-files/env.shared
+
+# Load local environment variables (not committed to git)
+[ -f ~/dot-files/env.local ] && source ~/dot-files/env.local
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export FZF_DEFAULT_OPTS="--extended"
